@@ -1,0 +1,28 @@
+Oblig 7 | IN1000 | Høst 2021
+
+Filnavn: oppg_1_tekst.txt
+Oppgave: 1
+
+KLAR FOR RETTING!
+
+Oppgave 1.2
+Når vi oppretter en instans av klassen Spilleliste og legger til sanger, blir de
+lagret i listen som instansvariabelen _sanger referer til. Ettersom vi lagrer Sang-
+objekter, og ikke f.eks. artist som nøkkel + tittel som innholdsverdi, er det naturlig
+å velge en liste til å gjøre dette. Med så få sanger som vi bruker her, gir det mening
+å ha en liste der vi har direkte tilgang til hvert Sang-objekt og dets metoder. Ettersom
+det også er en spilleliste vi kun skal spille oss gjennom, er det heller ikke noe poeng i å
+gjøre iterasjonen mer komplisert ved å iterere over key, value pairs og spille av objektene
+på den måtenf.eks.
+
+Oppgave 1.3
+Den åpenbare fordelen med å ikke inkludere filnavn i konstruktøren er at vi nå kan 
+lage en spilleliste på den måten vi ønsker, uten å være bundet til en fil. Jeg kan
+for eksempel bruke spilleliste.leggTilSang() flere ganger for å sette sammen listen
+slik jeg vil. Dersom jeg fortsatt vil lese inn data fra en fil, har jeg jo allerede
+definert en praktisk prosedyremetode som gjør det for meg.
+
+Oppgave 1.4
+Dersom rekkefølgen på tittel og artist byttes om, må også indekseringen jeg har brukt
+for å lese fra fil og legge inn, nemlig sang = Sang(deler[1], deler[0]) byttes om.
+Det riktige ville da være sang = Sang(deler[0], deler[1])

@@ -1,0 +1,29 @@
+Oblig 6 | IN1000 | Høst 2021
+
+Filnavn: begreper.txt
+
+KLAR FOR RETTING!
+
+Oppgave 5:
+
+A. Klassedefinisjon
+Omfatter hele klassen, altså linje 1-16.
+
+B. Opprettelse av nytt objekt
+Linje 19 og 20. Oppretter instanser av klassen = objekter.
+
+C. Definisjon av instansvariabel
+Linje 3-5. self._vekt blir også oppdatert på linje 9 og 13.
+
+D. Definisjon av instansmetode
+Linje 2, 7, 11 og 15, med tilhørene kodelinjer som utgjør implementasjonen av hver metode.
+
+E. Definisjon av konstruktør
+Linje 2 med implementasjon på linje 3-5.
+
+F. Kall på instansmetode
+Linje 21-22, 25-28 og 31-34. 
+For å være ekstra ekstra presis blir også __init__-metoden kalt automatisk ved opprettelse på linje 19 og 20.
+
+G. Argumenter
+Linje 19-20, 25-26 og 31-32.

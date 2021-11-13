@@ -1,0 +1,52 @@
+Oblig 6 | IN1000 | Høst 2021
+
+Filnavn: teori.txt
+
+KLAR FOR RETTING!
+
+Oppgave 1:
+Innkapsling (engelsk encapsulation) er når man "pakker inn" en instansvariabel eller en metode i en klasse uten at den ligger åpent tilgjengelig 
+for brukeren. Innkapsling er et av elementene i det vi kaller abstraksjon, altså at man "gjemmer" behind the scenes-prosessene fra sluttbrukeren 
+slik at klassen blir enklere og tryggere å forstå og bruke. Inkapsling er særlig nyttig for å sikre at brukeren ikke endrer hvordan en metode
+funker eller verdien til en instansvariabel - noe som er veldig viktig når man etter hvert har større programmer som avhenger av at klassen 
+fungerer som den skal til enhver tid. En måte å signalisere at instansvariabler ikke skal røres på er å gjøre dem private (_ foran navnet) eller
+protected (__ [dunder] foran navnet).
+
+Oppgave 2:
+Grensesnittet til en klasse er de ulike metodene og returverdiene som er tilgjengelige for brukeren, altså nesten alle kodelinjene som inneholder def eller return.
+Disse linjene er de eneste brukeren egentlig skal kunne bruke. Det som skjer under panseret, altså mellom def og en eventuell return-linje, utgjør implementasjonen.
+Det er "behind the scenes"-prosessen til hver metode, som altså ikke skal tukles med av den som bare bruker klassen. 
+
+Oppgave 3:
+Instansmetoder/metoder/tjenester er egne funksjoner eller prosedyrer som fungerer for hver instans av en gitt klasse.
+Mens de prosedyrene/funksjonene vi kjenner fra før må kalles med funksjonsnavn() og de argumentene vi måtte ønske, kan
+alle instansmetoder kalles med instans.instansmetode(), og de må i tillegg ta selve instansen (self) som parameter/argument.
+Instansmetoder skal heller ikke importeres individuelt fra en fil slik vi kan gjøre med andre funksjoner – de hører til hver klasse.
+
+Eksempel fra hund.py for å illustrere hva som er hva:
+
+Linje 29-52 utgjør hele klassedefinisjonen
+class Hund: 
+    def __init__(self, alder, vekt): # En spesiell del av grensesnittet - konstruktøren, en nødvendig del av klassedefinisjonen der instansvariablene blir definert
+        self._alder = alder # implementasjon - konstruktøren kan inneholde variabler og verdier brukeren aldri skal se eller røre, men som er viktige for resten
+        self._vekt = vekt # implementasjon
+        self._metthet = 10 # implementasjon
+    
+    def __repr__(self): # Grensesnitt (kan kalles med print(instans))
+        return f"en {self._alder} år gammel (og veldig søt) hund:\n\n   / \__\n  (    @\___\n  /         O\n /   (_____/\n/_____/" # grensesnitt fordi returverdien blir tilgjengelig for brukeren
+    
+    def hentAlder(self): # Grensesnitt
+        return self._alder # Grensesnitt fordi returverdien blir tilgjengelig for brukeren
+    
+    def hentVekt(self): # Grensesnitt
+        return self._vekt # Grensesnitt fordi returverdien blir tilgjengelig for brukeren
+    
+    def spring(self): # Grensesnitt
+        self._metthet =- 1 # implementasjon
+        if self._metthet > 5: # implementasjon
+            self._vekt =- 1 # implementasjon
+    
+    def spis(self, heltall): # Grensesnitt
+        self._metthet += heltall # implementasjon
+        if self._metthet > 7: # implementasjon
+            self._vekt += 1 # implementasjon
